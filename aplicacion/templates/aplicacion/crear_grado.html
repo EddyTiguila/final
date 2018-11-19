@@ -1,0 +1,28 @@
+<html>
+<head>
+<meta charset ="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<title>Crear Grado</title>
+
+</head>
+<body>
+  <div class="container bg-dark">
+  <div class="card card-login  mt-5 ">
+    <div class="card-header text-center">grado</div>
+    <div class="card-body ">
+
+  <form method="post">
+    <div class="form-label-group">
+{% csrf_token %}
+
+  {{formulario.as_p}}
+</div>
+  <button type="submit" class="btn btn-primary btn-block">crear</button>
+</form>
+</div>
+</div>
+</div>
+</body>
+</html>
