@@ -18,7 +18,7 @@ def crearGrado(request):
 
             for materia_id in request.POST.getlist('materia'):
 
-                pempum = Pemsum (nombre='--',materiad=materia, grado= grado, descripcion='--')
+                pemsum = Pemsum (nombre='--',materia=materia, grado=grado, descripcion='--')
 
                 pemsum.save()
 

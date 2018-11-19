@@ -1,8 +1,8 @@
 from django.db import models
-from django.contrib import admin# Create your models here.
+from django.contrib import admin
 
 
-class Materia(models.Model): #equipo
+class Materia(models.Model):
     id = models.AutoField(primary_key =True)
     nombre  =   models.CharField(max_length=30)
     creditos  =   models.CharField(max_length=30)
@@ -10,7 +10,7 @@ class Materia(models.Model): #equipo
         return self.nombre
 
 
-class Grado(models.Model): #CTorneo
+class Grado(models.Model):
     id = models.AutoField(primary_key =True)
     nombre    = models.CharField(max_length=60)
     seccion    = models.CharField(max_length=60)
@@ -19,7 +19,7 @@ class Grado(models.Model): #CTorneo
     def __str__(self):
         return self.nombre
 
-class Pemsum(models.Model): #competision
+class Pemsum(models.Model): 
     id = models.AutoField(primary_key =True)
     nombre    = models.CharField(max_length=60, null=True)
     materia = models.ForeignKey(Materia, on_delete=models.CASCADE)
